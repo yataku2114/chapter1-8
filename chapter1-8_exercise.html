@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" href="chapter1-8_exercise.css">
+  <head>
+    <title>第８章　演習問題</title>
+  </head>
+
+  <main>
+    <div class="main-item">
+      <div class="list">
+        <p>リスト1</p>
+        <p>リスト2</p>
+        <p>リスト3</p>
+        <p>リスト4</p>
+        <p>リスト5</p>
+        <p>リスト6</p>
+        <p>リスト7</p>
+      </div>
+
+      <div class="box">
+        <div class="box-text"></div>
+        <div class="box-text"></div>
+        <div class="box-text"></div>
+        <div class="box-text"></div>
+        <div class="box-text"></div>
+        <div class="box-text"></div>
+        <div class="box-text"></div>
+        <div class="box-text"></div>
+        <div class="box-text"></div>
+      </div>
+    </div>
+  </main>
+</html>
+
+
+<!-- 解答を確認したうえで気づいたこと -->
+<!-- pでリスト1~7作った際に、pはよく使うコードなので、classをしっかり作るべきであった -->
+<!-- 上に50px、下に50pxの余白を作る際だが、今回はmainで大きな箱を作ったから、そこで50pxずつ離せばよかった。 -->
+<!-- ※解答のcss（main）を参考※ -->
+
+
+<!-- 途中で詰まったところ -->
+<!-- boxが3つずつ綺麗に収まらなかった -->
+<!-- 原因は全てのbox-textに対してmargin-right:5%が適応され、箱3,6,9のところがおかしくなって枠に入らなかった -->
+
+<!-- list と box が横並びになってしまった -->
+<!-- 2つをmain-itemクラスで囲い込むことによって解決 -->
+<!-- mainに対してflexを使用しているので、listクラス、boxクラスが別々と判定されて横並びになった可能性大 -->
+<!-- それを1つの箱(main-item)で囲い込むことによって、同じ枠組みとして認識させた -->
+
+<!-- .list{text-align: left;}が上手くいかなかった -->
+<!-- width 960pxを適応することで問題解決　mainのjustify-content:center;とmargin:0 auto;が適応されていたので、文字が中央によった可能性大 -->
